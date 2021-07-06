@@ -52,7 +52,7 @@
     
     methods:{
     loadDetails (newPage) {
-        this.$resource('Tests/'+this.id+'?Page='+newPage+'&PageSize='+this.pageSize).get().then(response => response.json())
+        this.$resource('Tests/'+this.id+'?InSitemap=true&InWebsite=true'+'&Page='+newPage+'&PageSize='+this.pageSize).get().then(response => response.json())
           .then(details => this.details=details.result)
       },
     },
